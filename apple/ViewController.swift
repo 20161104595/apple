@@ -72,6 +72,13 @@ class ViewController: UIViewController {
     @IBAction func except(_ sender: Any) {
     }
     
+    @IBAction func little(_ sender: Any) {
+        player.text = player.text!+"."
+    }
+    
+    @IBAction func clear(_ sender: Any) {
+        player.text=""
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

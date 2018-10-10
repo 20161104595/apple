@@ -10,9 +10,13 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var player: UILabel!
     
-
-    @IBOutlet weak var player: UITextField!
+    @IBOutlet weak var player1: UITextField!
+    
+    @IBOutlet weak var player2: UITextField!
+    
+    
     var re = 0//判断player.text前是否存在符号
     @IBAction func zero(_ sender: Any) {
         player.text = "0"

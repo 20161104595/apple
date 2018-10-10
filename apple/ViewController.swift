@@ -13,48 +13,93 @@ class ViewController: UIViewController {
     
 
     @IBOutlet weak var player: UITextField!
-    
+    var re = 0//判断player.text前是否存在符号
     @IBAction func zero(_ sender: Any) {
         player.text = "0"
         
     }
     
     @IBAction func one(_ sender: Any) {
+        if re == 1{
+            player.text="1"
+        }
+        else{
         player.text = player.text!+"1"
+        }
     }
     
     @IBAction func two(_ sender: Any) {
+        if re == 1{
+            player.text="2"
+        }
+        else{
         player.text = player.text!+"2"
+        }
     }
     
     @IBAction func three(_ sender: Any) {
+        if re == 1{
+            player.text="3"
+        }
+        else{
         player.text = player.text!+"3"
+        }
     }
     
     @IBAction func four(_ sender: Any) {
+        if re == 1{
+            player.text="4"
+        }
+        else{
         player.text = player.text!+"4"
+        }
     }
     
     
     @IBAction func five(_ sender: Any) {
+        if re == 1{
+            player.text="5"
+        }
+        else{
         player.text = player.text!+"5"
+        }
     }
     
     @IBAction func six(_ sender: Any) {
+        if re == 1{
+            player.text="6"
+        }
+        else{
         player.text = player.text!+"6"
+        }
     }
     
     
     @IBAction func seven(_ sender: Any) {
+        if re == 1{
+            player.text="6"
+        }
+        else{
         player.text = player.text!+"7"
+        }
     }
     
     @IBAction func eight(_ sender: Any) {
+        if re == 1{
+            player.text="8"
+        }
+        else{
         player.text = player.text!+"8"
+        }
     }
     
     @IBAction func nine(_ sender: Any) {
+        if re == 1{
+            player.text="9"
+        }
+        else{
         player.text = player.text!+"9"
+        }
     }
     
     @IBAction func add(_ sender: Any) {
@@ -74,6 +119,7 @@ class ViewController: UIViewController {
     
     @IBAction func little(_ sender: Any) {
         player.text = player.text!+"."
+        //judge = 1
     }
     
     @IBAction func clear(_ sender: Any) {

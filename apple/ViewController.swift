@@ -106,8 +106,11 @@ class ViewController: UIViewController {
         }
     }
     
-    @IBAction func add(_ sender: Any) {
+
+    @IBAction func plus(_ sender: Any) {
+        
     }
+    
     
     @IBAction func reduce(_ sender: Any) {
     }

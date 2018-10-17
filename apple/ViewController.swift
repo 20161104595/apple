@@ -22,7 +22,9 @@ class ViewController: UIViewController {
         player.text = "0"
         
     }
-    
+    var number = 0 //判断加减乘除
+    var judge = 0 //决定输出数字的位数
+    var add = 0
     @IBAction func one(_ sender: Any) {
         if re == 1{
             player.text="1"
@@ -108,25 +110,135 @@ class ViewController: UIViewController {
     
 
     @IBAction func plus(_ sender: Any) {
+        if add == 1{
+            let a = Double(player1.text!)!
+            let b = Double(player.text!)!
+            let c = a + b
+             player1.text = String(c)
+             player.text = ""
+            re = 1
+        }else{
+            if player.text == ""{
+                player.text = "0"
+            }else {
+                let x = Double(player.text!)!
+                player1.text = String(x)
+                player.text=""
+                number = 2
+                re=0
+            }
+        }
         
     }
     
     
     @IBAction func reduce(_ sender: Any) {
+        if add == 1{
+            let a = Double(player1.text!)!
+            let b = Double(player.text!)!
+            let c = a - b
+            player1.text = String(c)
+            player.text = ""
+            number = 1
+            re = 1
+            }else{
+                  if player.text == ""{
+                   player.text = "0"
+                    }else {
+                      let x = Double(player.text!)!
+                      player1.text = String(x)
+                      player.text=""
+                      number = 2
+                      re=0
+            
+            }
+            
+         }
     }
     
     @IBAction func multiply(_ sender: Any) {
+        if add == 1{
+            let a = Double(player1.text!)!
+            let b = Double(player.text!)!
+            let c = a * b
+            player1.text = String(c)
+            player.text = ""
+            number = 3
+            re = 1
+        }else{
+            if player.text == ""{
+                player.text = "0"
+            }else {
+                let x = Double(player.text!)!
+                player1.text = String(x)
+                player.text=""
+                number = 3
+                re=0
+                add = 1
+            }
+            
+        }
     }
     
     @IBAction func equal(_ sender: Any) {
+        var d:Double
+        var c:Double
+        let x = Double(player1.text!)!
+        c=(player.text!as NSString).doubleValue
+        if number == 1{
+            d = x - c
+        }else if number == 2{
+            d = x + c
+        }else if number == 3{
+            d = x * c
+        }else if number == 4{
+            d = x/(c)
+        }else{
+            d=1000
+        }
+        player2.text = String(c)
+        if judge == 1{
+            player.text = String(format:"%f",d)
+        }else{
+           player.text = String(format:"%.0f",d)
+        }
+        re = 1
+        judge = 0
+        add = 0
     }
     
     @IBAction func except(_ sender: Any) {
+        if add == 1{
+            
+                    let a = Double(player1.text!)!
+                    let b = Double(player.text!)!
+                    let c = a / b
+                    player1.text = String(c)
+                    player.text = ""
+                    number = 4
+                    re = 1
+                    }
+        else{
+              if player.text == ""{
+                 player.text = "0"
+            }
+              else {
+                     let y = Double(player.text!)!
+                     player1.text = String(y)
+                     player.text = ""
+                     number = 4
+                     re = 0
+                     add = 1
+                }
+            
+       }
+        
+
     }
     
     @IBAction func little(_ sender: Any) {
         player.text = player.text!+"."
-        //judge = 1
+        judge = 1
     }
     
     @IBAction func clear(_ sender: Any) {

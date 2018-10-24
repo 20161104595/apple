@@ -20,6 +20,7 @@ class ViewController: UIViewController {
     var re = 0//判断player.text前是否存在符号
     @IBAction func zero(_ sender: Any) {
         player.text = "0"
+        re=0
         
     }
     var number = 0 //判断加减乘除
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
     @IBAction func one(_ sender: Any) {
         if re == 1{
             player.text="1"
+            re=0
         }
         else{
         player.text = player.text!+"1"
@@ -37,6 +39,7 @@ class ViewController: UIViewController {
     @IBAction func two(_ sender: Any) {
         if re == 1{
             player.text="2"
+            re=0
         }
         else{
         player.text = player.text!+"2"
@@ -46,6 +49,7 @@ class ViewController: UIViewController {
     @IBAction func three(_ sender: Any) {
         if re == 1{
             player.text="3"
+            re=0
         }
         else{
         player.text = player.text!+"3"
@@ -55,6 +59,7 @@ class ViewController: UIViewController {
     @IBAction func four(_ sender: Any) {
         if re == 1{
             player.text="4"
+            re=0
         }
         else{
         player.text = player.text!+"4"
@@ -65,6 +70,7 @@ class ViewController: UIViewController {
     @IBAction func five(_ sender: Any) {
         if re == 1{
             player.text="5"
+            re=0
         }
         else{
         player.text = player.text!+"5"
@@ -74,6 +80,7 @@ class ViewController: UIViewController {
     @IBAction func six(_ sender: Any) {
         if re == 1{
             player.text="6"
+            re=0
         }
         else{
         player.text = player.text!+"6"
@@ -83,7 +90,8 @@ class ViewController: UIViewController {
     
     @IBAction func seven(_ sender: Any) {
         if re == 1{
-            player.text="6"
+            player.text="7"
+            re=0
         }
         else{
         player.text = player.text!+"7"
@@ -93,6 +101,7 @@ class ViewController: UIViewController {
     @IBAction func eight(_ sender: Any) {
         if re == 1{
             player.text="8"
+            re=0
         }
         else{
         player.text = player.text!+"8"
@@ -102,6 +111,7 @@ class ViewController: UIViewController {
     @IBAction func nine(_ sender: Any) {
         if re == 1{
             player.text="9"
+            re=0
         }
         else{
         player.text = player.text!+"9"

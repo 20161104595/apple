@@ -213,7 +213,7 @@ class ViewController: UIViewController {
                     let a = Double(player1.text!)!
                     let b = Double(player.text!)!
                     let c = a / b
-                    player1.text = String(c)
+                    player1.text = String(c)
                     player.text = ""
                     number = 4
                     re = 1

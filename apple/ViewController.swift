@@ -120,17 +120,20 @@ class ViewController: UIViewController {
     
 
     @IBAction func plus(_ sender: Any) {
+        judge = 0
         if add == 1{
             let a = Double(player1.text!)!
             let b = Double(player.text!)!
             let c = a + b
              player1.text = String(c)
              player.text = ""
+             number = 2
             re = 1
         }else{
             if player.text == ""{
                 player.text = "0"
             }else {
+                add = 1
                 let x = Double(player.text!)!
                 player1.text = String(x)
                 player.text=""
@@ -143,6 +146,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func reduce(_ sender: Any) {
+        judge = 0
         if add == 1{
             let a = Double(player1.text!)!
             let b = Double(player.text!)!
@@ -155,10 +159,11 @@ class ViewController: UIViewController {
                   if player.text == ""{
                    player.text = "0"
                     }else {
+                      add = 1
                       let x = Double(player.text!)!
                       player1.text = String(x)
                       player.text=""
-                      number = 2
+                      number = 1
                       re=0
             
             }
@@ -167,6 +172,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func multiply(_ sender: Any) {
+        judge = 0
         if add == 1{
             let a = Double(player1.text!)!
             let b = Double(player.text!)!
@@ -179,6 +185,7 @@ class ViewController: UIViewController {
             if player.text == ""{
                 player.text = "0"
             }else {
+                add = 1
                 let x = Double(player.text!)!
                 player1.text = String(x)
                 player.text=""
@@ -208,7 +215,7 @@ class ViewController: UIViewController {
         }
         player2.text = String(c)
         if judge == 1{
-            player.text = String(format:"%f",d)
+           player.text = String(format:"%f",d)
         }else{
            player.text = String(format:"%.0f",d)
         }
@@ -218,6 +225,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func except(_ sender: Any) {
+        judge = 0
         if add == 1{
             
                     let a = Double(player1.text!)!
@@ -233,6 +241,7 @@ class ViewController: UIViewController {
                  player.text = "0"
             }
               else {
+                     add = 1
                      let y = Double(player.text!)!
                      player1.text = String(y)
                      player.text = ""
@@ -253,6 +262,8 @@ class ViewController: UIViewController {
     
     @IBAction func clear(_ sender: Any) {
         player.text=""
+        player1.text=""
+        add = 0
     }
    
     @IBAction func percent(_ sender: Any) {

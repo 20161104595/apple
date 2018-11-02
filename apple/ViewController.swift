@@ -16,13 +16,12 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var player2: UITextField!
     
-    
-    var re = 0//判断player.text前是否存在符号
     @IBAction func zero(_ sender: Any) {
         player.text = "0"
         re=0
         
     }
+    var re = 0//判断player.text前是否存在符号
     var number = 0 //判断加减乘除
     var judge = 0 //决定输出数字的位数
     var add = 0
@@ -217,7 +216,7 @@ class ViewController: UIViewController {
         if judge == 1{
            player.text = String(format:"%f",d)
         }else{
-           player.text = String(format:"%.0f",d)
+           player.text = String(format:"%.10f",d)
         }
         re = 1
         judge = 0
@@ -225,7 +224,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func except(_ sender: Any) {
-        judge = 0
+        
         if add == 1{
             
                     let a = Double(player1.text!)!
@@ -235,6 +234,7 @@ class ViewController: UIViewController {
                     player.text = ""
                     number = 4
                     re = 1
+                    judge = 0
                     }
         else{
               if player.text == ""{
@@ -248,6 +248,7 @@ class ViewController: UIViewController {
                      number = 4
                      re = 0
                      add = 1
+                     judge = 0
                 }
             
        }
@@ -256,7 +257,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func little(_ sender: Any) {
-        player.text = player.text!+"."
+        if judge == 0 {
+           player.text = player.text!+"."
+         }
         judge = 1
     }
     
@@ -264,6 +267,7 @@ class ViewController: UIViewController {
         player.text=""
         player1.text=""
         add = 0
+        judge = 0
     }
    
     @IBAction func percent(_ sender: Any) {

@@ -17,8 +17,13 @@ class ViewController: UIViewController {
     @IBOutlet weak var player2: UITextField!
     
     @IBAction func zero(_ sender: Any) {
-        player.text = "0"
-        re=0
+        if re == 1{
+            player.text="0"
+            re=0
+        }
+        else{
+            player.text = player.text!+"0"
+        }
         
     }
     var re = 0//判断player.text前是否存在符号
@@ -221,6 +226,11 @@ class ViewController: UIViewController {
         re = 1
         judge = 0
         add = 0
+        var clear:String = player.text!
+        while clear.last == "0"{
+            clear.removeLast()
+        }
+        player.text = clear
     }
     
     @IBAction func except(_ sender: Any) {

@@ -223,11 +223,17 @@ class ViewController: UIViewController {
         }else{
            player.text = String(format:"%.10f",d)
         }
+        if c == 0 && number == 4{
+            player.text = "错误"
+        }
         re = 1
         judge = 0
         add = 0
         var clear:String = player.text!
         while clear.last == "0"{
+            clear.removeLast()
+        }
+        while clear.last == "."{
             clear.removeLast()
         }
         player.text = clear

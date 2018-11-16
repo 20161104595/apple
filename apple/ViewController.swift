@@ -214,7 +214,16 @@ class ViewController: UIViewController {
             d = x * c
         }else if number == 4{
             d = x/(c)
-
+        }else{
+            d=1000
+        }
+        player2.text = String(c)
+        if judge == 1{
+           player.text = String(format:"%f",d)
+        }else{
+           player.text = String(format:"%.10f",d)
+        }
+        if c == 0 && number == 4{
             player.text = "错误"
         }
         re = 1
